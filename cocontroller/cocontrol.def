@@ -1,4 +1,4 @@
-LIBRARY plussz.mxe
+LIBRARY cocontrol.mxe
 
 EXPORTS
 	main
