@@ -8,15 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		22CF11E80EE9A9AC0054F513 /* cocontrol.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CF11E70EE9A9AC0054F513 /* cocontrol.m */; };
+		DC465F71184411ED0060D2B6 /* maxmspsdk.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = DC465F70184411ED0060D2B6 /* maxmspsdk.xcconfig */; };
 		DCB154B91820430800CA73BF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB154B81820430800CA73BF /* Cocoa.framework */; };
 		DCB154BC18204A9F00CA73BF /* Draw.h in Headers */ = {isa = PBXBuildFile; fileRef = DCB154BA18204A9F00CA73BF /* Draw.h */; };
 		DCB154BD18204A9F00CA73BF /* Draw.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB154BB18204A9F00CA73BF /* Draw.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		22CF10220EE984600054F513 /* maxmspsdk.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = maxmspsdk.xcconfig; path = ../../maxmspsdk.xcconfig; sourceTree = SOURCE_ROOT; };
 		22CF11E70EE9A9AC0054F513 /* cocontrol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cocontrol.m; sourceTree = "<group>"; };
-		2FBBEAE508F335360078DB84 /* cocontrol.mxo */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cocontrol.mxo; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FBBEAE508F335360078DB84 /* cocontrol.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cocontrol.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC465F70184411ED0060D2B6 /* maxmspsdk.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = maxmspsdk.xcconfig; sourceTree = "<group>"; };
 		DCB154B81820430800CA73BF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DCB154BA18204A9F00CA73BF /* Draw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Draw.h; sourceTree = "<group>"; };
 		DCB154BB18204A9F00CA73BF /* Draw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Draw.m; sourceTree = "<group>"; };
@@ -37,10 +38,10 @@
 		089C166AFE841209C02AAC07 /* iterator */ = {
 			isa = PBXGroup;
 			children = (
+				DC465F70184411ED0060D2B6 /* maxmspsdk.xcconfig */,
 				DCB154BA18204A9F00CA73BF /* Draw.h */,
 				DCB154BB18204A9F00CA73BF /* Draw.m */,
 				DCB154B81820430800CA73BF /* Cocoa.framework */,
-				22CF10220EE984600054F513 /* maxmspsdk.xcconfig */,
 				22CF11E70EE9A9AC0054F513 /* cocontrol.m */,
 				19C28FB4FE9D528D11CA2CBB /* Products */,
 			);
@@ -50,7 +51,7 @@
 		19C28FB4FE9D528D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2FBBEAE508F335360078DB84 /* cocontrol.mxo */,
+				2FBBEAE508F335360078DB84 /* cocontrol.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,7 +86,7 @@
 			);
 			name = "max-external";
 			productName = iterator;
-			productReference = 2FBBEAE508F335360078DB84 /* cocontrol.mxo */;
+			productReference = 2FBBEAE508F335360078DB84 /* cocontrol.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -117,6 +118,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC465F71184411ED0060D2B6 /* maxmspsdk.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +161,6 @@
 		};
 		2FBBEAE108F335360078DB84 /* Development */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22CF10220EE984600054F513 /* maxmspsdk.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -171,7 +172,6 @@
 		};
 		2FBBEAE208F335360078DB84 /* Deployment */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22CF10220EE984600054F513 /* maxmspsdk.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
