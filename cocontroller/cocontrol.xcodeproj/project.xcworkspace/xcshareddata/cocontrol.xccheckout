@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>30D96EF4-C0F9-4648-9937-7AA289733AC7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>cocontrol</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C0EA33F0-5086-4CAB-BABC-5E6449B0C492</key>
+		<string>ssh://github.com/soundfantastic/Max-MSP-externals.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>cocontroller/cocontrol.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C0EA33F0-5086-4CAB-BABC-5E6449B0C492</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/soundfantastic/Max-MSP-externals.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C0EA33F0-5086-4CAB-BABC-5E6449B0C492</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C0EA33F0-5086-4CAB-BABC-5E6449B0C492</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Max-MSP-externals</string>
+		</dict>
+	</array>
+</dict>
+</plist>
