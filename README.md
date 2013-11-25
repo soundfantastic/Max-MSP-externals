@@ -1,4 +1,4 @@
 Max-MSP-externals
 =================
 
-Max/MSP external objects
+Cycling74 Max/MSP external objects using Objective-C/Cocoa
