@@ -36,17 +36,13 @@ int C74_EXPORT main(void) {
 	t_class *c;
 	
 	c = class_new("cocontrol", (method)cocontrol_new, (method)cocontrol_free, sizeof(t_cocontrol), 0L, A_DEFLONG, 0);
-	
     class_addmethod(c, (method)cocontrol_bang,          "bang",		0);
     class_addmethod(c, (method)cocontrol_left_inlet,	"int",		A_LONG, 0);
     class_addmethod(c, (method)cocontrol_dblclick,      "dblclick",	A_CANT, 0);
     class_addmethod(c, (method)cocontrol_list,          "anything", A_GIMME, 0);
     class_addmethod(c, (method)cocontrol_assist,        "assist",	A_CANT, 0);
-	
 	class_register(CLASS_BOX, c);
 	cocontrol_class = c;
-
-	post("cocontrol loaded...",0);
 	return 0;
 }
 
@@ -79,8 +75,6 @@ void* cocontrol_new(long n)	 {
 	x->x_outlet = floatout(x);
     x->total_points = 0;
 	x->point_index	= 0;
-	
-	post(" new cocontrol object instance added to patch...",0);
     
     int style =  NSTitledWindowMask | NSClosableWindowMask | NSResizableWindowMask | NSUtilityWindowMask;
     x->panel = [[NSPanel alloc] initWithContentRect:NSMakeRect(0, 0, 200, 200)
@@ -101,9 +95,6 @@ void* cocontrol_new(long n)	 {
 	return(x);					// return a reference to the object instance 
 }
 
-
-//--------------------------------------------------------------------------
-
 void cocontrol_dblclick(t_cocontrol *x) {
     if(![x->panel isVisible]) {
         [x->panel makeKeyAndOrderFront:NSApp];
@@ -120,7 +111,7 @@ void cocontrol_assist(t_cocontrol *x, void *b, long m, long a, char *s) {
                 sprintf(s,"Y output");
                 break;
             case 2:
-                sprintf(s,"Total points output");
+                sprintf(s,"Total points");
                 break;
         }
 	else {
@@ -154,7 +145,7 @@ void cocontrol_list(t_cocontrol *x, t_symbol *s, long argc, t_atom *argv) {
 }
 
 void cocontrol_bang(t_cocontrol *x)	{
-
+    post(" BANG ",0);
 }
 
 void cocontrol_left_inlet(t_cocontrol *x, long n) {

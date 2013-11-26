@@ -19,6 +19,9 @@
     [pointsContainer removeAllObjects];
     [pointsContainer release];
     pointsContainer = nil;
+    if(layer) {
+        CGLayerRelease(layer);
+    }
     [super dealloc];
 }
 
@@ -48,11 +51,6 @@
     if(!NSPointInRect(mousePoint, dirtyRect) || pointsContainer.count == 0) {
         return;
     }
-    
-    // Drawing code here.
-//    NSString* str = [NSString stringWithFormat:@"%.f %.f", mousePoint.x, mousePoint.y];
-//    NSSize size = [str sizeWithAttributes:nil];
-//    [str drawAtPoint:NSMakePoint(1, dirtyRect.size.height - size.height) withAttributes:nil];
     
     if(!g_context) {
         g_context = (CGContextRef)[[NSGraphicsContext currentContext] graphicsPort];
@@ -105,7 +103,6 @@
 }
 
 - (void) renderContainerPointsAndLines:(CGContextRef)context_ {
-    
     CGContextRef context = CGLayerGetContext(layer);
     CGContextSetLineWidth(context, 0.5);
     NSPoint point = [[pointsContainer objectAtIndex:0] pointValue];
